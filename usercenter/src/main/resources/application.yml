@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/user_center?characterEncoding=utf-8&useSSL=false&serverTimezone=Hongkong
+    hikari:
+      username: root
+      password: 123
+      # >= 6.x: com.mysql.cj.jdbc.Driver
+      # <= 5.x: com.mysql.jdbc.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 8081
