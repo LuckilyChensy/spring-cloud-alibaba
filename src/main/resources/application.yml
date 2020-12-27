@@ -1,0 +1,16 @@
+# Spring 配置文件
+#server.port=8081
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: metrics,health
+
+# 应用描述
+info:
+  app-name: spring-boot-demo
+  author: chensy
+  email: chensy@email
