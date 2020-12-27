@@ -1,9 +1,10 @@
+# 所有环境公用的配置属性
 # Spring 配置文件
 #server.port=8081
 management:
   endpoint:
     health:
-      show-details: always
+      show-details: ${SOME_ENV}
   endpoints:
     web:
       exposure:
@@ -14,3 +15,15 @@ info:
   app-name: spring-boot-demo
   author: chensy
   email: chensy@email
+# 连字符
+---
+spring:
+  profiles: dev
+
+
+# 开发环境
+---
+spring:
+  profiles: prod
+server:
+  port: 8081
